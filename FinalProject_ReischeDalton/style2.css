@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui;
+}
+
+body {
+    --body-bg: #18181a;
+
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background: var(--body-bg);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 2rem;
+}
+
+nav {
+    --nav-bg: #490f0f;
+
+    height: 100%;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    background-color: var(--nav-bg);
+}
+
+.nav-bar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+
+.nav-bar li {
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    border-radius: 100vw 0 0 100vw;
+}
+
+.nav-bar li.active {
+    background: var(--body-bg);
+    position: relative;
+}
+.nav-bar li:hover:not(.active) {
+    background-color: var(--body-bg);
+    }
+
+.nav-bar li.active::before,
+.nav-bar li.active::after {
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0;
+    background: var(--nav-bg);
+}
+
+.nav-bar li.active::before {
+    top: calc(var(--border-radius) * -1);
+    border-radius: 0 0 100vw 0;
+    box-shadow: 10px 10px 0 10px var(--body-bg);
+}
+.nav-bar li.active::after {
+    bottom: calc(var(--border-radius) * -1);
+    border-radius: 0 100vw 0 0;
+    box-shadow: 10px -10px 0 10px var(--body-bg);
+}
+
+.nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.input-wrapper {
+    background-color: var(--body-bg);
+    width: 2125px;
+    border: 15px solid #490f0f;
+    padding: 50px;
+    margin: 20px auto;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically /
+    text-align: center; / Optional: Center text inside elements */
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            }
+
+            label {
+                padding: 12px 12px 12px 0;
+                display: inline-block;
+                }
+
+                .btn-send {
+                    border: solid black;
+                    background: var(--body-bg);
+                    padding: 0.5em;
+                    color: #ffffff;
+                    transition-duration: 0.4s;
+                }
+                .btn-send:hover {
+                    background-color: #490f0f;
+                    color: #ffffff;
+                }

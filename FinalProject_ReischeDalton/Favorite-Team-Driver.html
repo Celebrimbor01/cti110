@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+
+<html lang="en">
+
+<meta charset="UTF-8">
+
+<title>Form</title>
+
+<link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<body>
+
+<!--Your HTML tags will start here-->
+
+<div class="navbar-wrapper">
+	<nav>
+			<ul class="nav-bar">
+			  <li><a href="Home.html" target="_self">Home</a></li>
+			  <li><a href="Drivers-Teams.html" target="_self">Drivers/Teams</a></li>
+			  <li><a href="Tracks.html" target="_self">Tracks</a></li>
+			  <li class="active"><a href="Favorite-Team-Driver.html" target="_self">Favorite Team/Driver</a></li>
+			  <li><a href="https://www.formula1.com/" target="_blank">F1 Home</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="input-wrapper">
+	<form>
+	   <p>
+		   <label for="driver">Favorite Driver:</label>
+		   <input type="text" id="driver" name="driver" placeholder="Type favorite driver here...">
+	   </p>
+	   <p>
+		   <label for="team">Favorite Team:</label>
+		   <input type="text" id="team" name="team" placeholder="Type favorite team here...">
+	   </p>
+	   <p>
+		<label for="track">Favorite Track:</label>
+		<input type="text" id="track" name="track" placeholder="Type favorite track here...">
+	</p>
+	   <p>
+		   <label for="comments">Description:</label>
+		   <textarea id="comments" name="comments" placeholder="Briefly explain your choices..." rows="7" cols="50"></textarea>
+	   </p>
+	   <p>
+		   <button type="submit" class="btn-send">Send Data</button>
+	   </p>
+   </div>
+
+ </form>
+
+<!--Your HTML tags will end here-->
+
+</body>
+
+</html>
